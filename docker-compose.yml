@@ -7,9 +7,9 @@ services:
       args:
         - DEV=true
     ports:
-      - "8000:8000"
+      - "8888:8888"
     volumes:
       - ./app:/app
     command: >
       sh -c "python manage.py makemigrations &&
-              python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+              python manage.py migrate && python manage.py runserver 0.0.0.0:8888"
